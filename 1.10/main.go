@@ -11,7 +11,6 @@ func main() {
 		key = int(v/10) * 10
 		res[key] = append(res[key], v)
 	}
-
 	for k, v := range res {
 		fmt.Println(k, v)
 	}
