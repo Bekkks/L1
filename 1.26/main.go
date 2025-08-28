@@ -7,10 +7,12 @@ import (
 
 func work(str string) bool {
 	str = strings.ToLower(str)
-	for _, i := range str {
-		if strings.Count(str, string(i)) > 1 {
+	ms := make(map[rune]bool)
+	for _, r := range str {
+		if ms[r] {
 			return false
 		}
+		ms[r] = true
 	}
 	return true
 }
